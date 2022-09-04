@@ -16,6 +16,11 @@ App({
                 console.log(that.globalData.statusBarHeight);
             }
         })
+        var user = wx.getStorageSync("user")
+        if (user) {
+            that.globalData.nickName = user.nickName
+            that.globalData.avatarUrl = user.avatarUrl
+        }
         // 获取状态栏的高度
         wx.getSystemInfo({
             success: function (res) {

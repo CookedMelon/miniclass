@@ -58,7 +58,7 @@
 
         <view class="" wx:for="{{activities}}" bindtap="clickactivity" data-index="{{index}}"
             style="position:absolute;text-align: center;left:{{index*gap}}rpx;bottom: 30rpx;{{choose==index?'font-size: large;font-weight: 700;':'font-size: medium;color: rgb(116, 116, 116);'}}">
-            {{item}}
+            {{item.name}}
 
         </view>
         <text class="round"
@@ -69,29 +69,16 @@
 
     </view>
     <view class="actContainer grid col-3 margin-lg" style="margin-top: 0;">
-        <view class="padding-xs">
-            <view class="radius-x bg-gradual-red " style="height:170rpx;opacity: 0.9;">
+        <view class="padding-xs" wx:for="{{activities[choose].acts}}">
+            <view class="radius-x {{item.color}} " style="height:170rpx;opacity: 0.9;">
                 <view class="myTxtCenter"
                     style="height: 100rpx;font-size: large;font-weight:600;color: rgba(240, 248, 255, 0.9);margin-top: 10rpx;">
-                    毓秀工大
+                    {{item.name}}
                 </view>
                 <image class="" src="../../image/arrow.png" mode="aspectFit"
                     style="position:relative;height:100rpx;width:100%;bottom:40rpx;z-index: 0;opacity: 0.3;">
                 </image>
             </view>
         </view>
-        <view class="padding-xs">
-            <view class="radius-x bg-gradual-red " style="height:170rpx;opacity: 0.9;">
-                <view class="myTxtCenter"
-                    style="height: 100rpx;font-size: large;font-weight:600;color: rgba(240, 248, 255, 0.9);margin-top: 10rpx;">
-                    毓秀工大
-                </view>
-                <image class="" src="../../image/arrow.png" mode="aspectFit"
-                    style="position:relative;height:100rpx;width:100%;bottom:40rpx;z-index: 0;opacity: 0.3;">
-                </image>
-            </view>
-        </view>
-
-
     </view>
 </scroll-view>

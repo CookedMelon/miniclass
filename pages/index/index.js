@@ -13,23 +13,23 @@ Page({
                     },
                     {
                         "name": "科学史话",
-                        "color": "bg-gradual-red"
+                        "color": "bg-gradual-green"
                     },
                     {
                         "name": "人物春秋",
-                        "color": "bg-gradual-red"
+                        "color": "bg-gradual-purple"
                     },
                     {
                         "name": "悦学经典",
-                        "color": "bg-gradual-red"
+                        "color": "bg-gradual-blue"
                     },
                     {
                         "name": "悦读书籍",
-                        "color": "bg-gradual-red"
+                        "color": "bg-gradual-pink"
                     },
                     {
                         "name": "学习答题",
-                        "color": "bg-gradual-red"
+                        "color": "bg-gradual-orange"
                     },
                 ]
             },
@@ -47,7 +47,7 @@ Page({
             }
 
         ],
-        choose: 1,
+        choose: 0,
         gap: 150
     },
 
@@ -91,6 +91,23 @@ Page({
             }, 100)
         })
 
+    },
+    onShow() {
+        const that = this;
+        this.setData({
+            getPicHeight: setInterval(function () {
+                let query = wx.createSelectorQuery()
+                query.select('#pic1').boundingClientRect((rect) => {
+                    if (rect) {
+                        let height = rect.height * app.globalData.pxToRpxScale
+                        that.setData({
+                            PicHeight: height
+                        })
+                    }
+                }).exec()
+                if (that.data.PicHeight > 0) clearInterval(that.data.getPicHeight)
+            }, 100)
+        })
     },
     clickactivity(e) {
         var index = e.currentTarget.dataset.index;

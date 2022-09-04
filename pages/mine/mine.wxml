@@ -1,2 +1,65 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class=""
+    style="background-color:#2F9A16;height:100rpx;width:100%;border-radius:100rpx;border-top-right-radius:0;border-top-left-radius:0;">
+</view>
+<view class="relative xs radius-xx shadow-warp bg-white margin-top margin-bottom text-center"
+    style="height: 200rpx;width:90%;margin:auto;bottom: 80rpx;display: flex;flex-direction: row;">
+    <image class="cu-avatar.xl round" mode="aspectFit" bindtap="getUserProfile" src="{{avatarUrl}}"
+        style="margin:auto;margin-left:30rpx">
+    </image>
+    <view class=" myTxtCenter" bindtap="getUserProfile"
+        style="flex:4;font-size: x-large;font-weight: 600;margin-left:60rpx;justify-content: left">
+        {{nickName}}
+    </view>
+</view>
+
+<view class="xs radius-xx shadow-warp bg-white margin-top margin-bottom text-center "
+    style="height: auto;width:90%;margin:auto;">
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+        <image class="" src="../../image/mine/lesson.png" mode="aspectFit"
+            style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
+        </image>
+        <view class="myTxtCenter" style="margin-left:0;font-size: larger;">
+            我的课程
+        </view>
+    </view>
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+        <image class="" src="../../image/mine/target.png" mode="aspectFit"
+            style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
+        </image>
+        <view class="myTxtCenter" style="margin-left:0;font-size: larger;">
+            学习进度
+        </view>
+    </view>
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+        <image class="" src="../../image/mine/check.png" mode="aspectFit"
+            style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
+        </image>
+        <view class="myTxtCenter" style="margin-left:0;font-size: larger;">
+            我的打卡
+        </view>
+    </view>
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+        <image class="" src="../../image/mine/phone.png" mode="aspectFit"
+            style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
+        </image>
+        <view class="myTxtCenter" style="margin-left:0;font-size: larger;">
+            联系客服
+        </view>
+    </view>
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+        <image class="" src="../../image/mine/opinion.png" mode="aspectFit"
+            style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
+        </image>
+        <view class="myTxtCenter" style="margin-left:0;font-size: larger;">
+            意见反馈
+        </view>
+    </view>
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+        <image class="" src="../../image/mine/exit.png" mode="aspectFit"
+            style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
+        </image>
+        <view class="myTxtCenter" style="margin-left:0;font-size: larger;">
+            退出登录
+        </view>
+    </view>
+</view>

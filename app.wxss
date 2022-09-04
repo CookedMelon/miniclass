@@ -18,6 +18,14 @@
     justify-content: center;
 }
 
+.oneline {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 page {
     height: 100%;
     width: 100%;

@@ -1,5 +1,7 @@
 {
     "component": true,
-    "navigationStyle": "custom",
-    "usingComponents": {}
+    "usingComponents": {},
+    "navigationBarBackgroundColor": "#2F9A16",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "学生管理"
 }
