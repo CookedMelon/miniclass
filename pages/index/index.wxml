@@ -1,0 +1,97 @@
+<view class="" style="position:fixed;width:100%;height: {{greenback}}rpx;background-color:#2F9A16">
+    <view class="cu-bar search absolute" style="top:{{StatusHeight}}rpx;height:{{navigationHeight}}rpx;width:80%">
+        <view class="search-form round">
+            <text class="cuIcon-search"></text>
+            <input type="text" placeholder="搜索课程" confirm-type="search"></input>
+        </view>
+
+    </view>
+    <image id="pic1" mode="aspectFit" src=".././../image/pic/word.png"
+        style="height:40%;width:60%;position:absolute;left:0;top:{{HeadBar}}rpx;z-index: 10;">
+
+    </image>
+    <button class="padding-xs cu-btn round bg-gradual-orange"
+        style="position: absolute; top:{{HeadBar+PicHeight+20}}rpx;left:40rpx;width:200rpx;height:auto">
+        <view class="myTxtCenter" style="font-weight: 300;">
+            主题课程
+        </view>
+    </button>
+    <image class="" mode="aspectFit" src=".././../image/pic/test.png"
+        style="height:60%;width:40%;position:absolute;right:0;bottom:0;z-index: 10;">
+
+    </image>
+
+
+</view>
+<view class="" style="width:100%;height: {{greenback}}rpx;background-color:green">
+
+</view>
+<view class="xs radius-xx shadow-warp bg-white margin-top grid col-4 margin-bottom text-center"
+    style="height:{{centerHeight}}rpx;width:90%;margin: auto;position: relative;bottom:60rpx;">
+    <view class="padding-sm">
+        <image mode="aspectFit" src=".././../image/index/1.png" style="height:80%;width:80%"></image>
+        <text class="" style="font-weight: 600;">
+            微课
+        </text>
+    </view>
+    <view class="padding-sm">
+        <image mode="aspectFit" src=".././../image/index/2.png" style="height:80%;width:80%"></image>
+        <text class="" style="font-weight: 600;">
+            直播
+        </text>
+    </view>
+    <view class="padding-sm">
+        <image mode="aspectFit" src=".././../image/index/3.png" style="height:80%;width:80%"></image>
+        <text class="" style="font-weight: 600;">
+            听书
+        </text>
+    </view>
+    <view class="padding-sm">
+        <image mode="aspectFit" src=".././../image/index/4.png" style="height:80%;width:80%"></image>
+        <text class="" style="font-weight: 600;">
+            题库
+        </text>
+    </view>
+</view>
+<scroll-view class="" scroll-x="false" scroll-y="true" style="height:{{allHeight-greenback-centerHeight-bottom}}rpx;">
+    <view class="padding-xs grid col-3" style="position:absolute;height:100rpx;width:80%;margin-left: 30rpx;">
+
+        <view class="" wx:for="{{activities}}" bindtap="clickactivity" data-index="{{index}}"
+            style="position:absolute;text-align: center;left:{{index*gap}}rpx;bottom: 30rpx;{{choose==index?'font-size: large;font-weight: 700;':'font-size: medium;color: rgb(116, 116, 116);'}}">
+            {{item}}
+
+        </view>
+        <text class="round"
+            style="position: absolute;background-color: blue;height:6rpx;left:{{choose*gap+50}}rpx;width:100rpx;bottom: 15rpx;">
+        </text>
+    </view>
+    <view class="" style="height:100rpx">
+
+    </view>
+    <view class="actContainer grid col-3 margin-lg" style="margin-top: 0;">
+        <view class="padding-xs">
+            <view class="radius-x bg-gradual-red " style="height:170rpx;opacity: 0.9;">
+                <view class="myTxtCenter"
+                    style="height: 100rpx;font-size: large;font-weight:600;color: rgba(240, 248, 255, 0.9);margin-top: 10rpx;">
+                    毓秀工大
+                </view>
+                <image class="" src="../../image/arrow.png" mode="aspectFit"
+                    style="position:relative;height:100rpx;width:100%;bottom:40rpx;z-index: 0;opacity: 0.3;">
+                </image>
+            </view>
+        </view>
+        <view class="padding-xs">
+            <view class="radius-x bg-gradual-red " style="height:170rpx;opacity: 0.9;">
+                <view class="myTxtCenter"
+                    style="height: 100rpx;font-size: large;font-weight:600;color: rgba(240, 248, 255, 0.9);margin-top: 10rpx;">
+                    毓秀工大
+                </view>
+                <image class="" src="../../image/arrow.png" mode="aspectFit"
+                    style="position:relative;height:100rpx;width:100%;bottom:40rpx;z-index: 0;opacity: 0.3;">
+                </image>
+            </view>
+        </view>
+
+
+    </view>
+</scroll-view>
