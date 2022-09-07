@@ -5,12 +5,34 @@ Page({
         PicHeight: -114154,
         activities: [
             {
-                "name": "课外阅读",
+                "name": "工大记忆",
                 "acts": [
                     {
                         "name": "毓秀工大",
-                        "color": "bg-gradual-red"
+                        "color": "bg-gradual-red",
+                        "bindtap": "jmp_NPU"
                     },
+                    {
+                        "name": "文化工大",
+                        "color": "bg-gradual-blue",
+                        "bindtap": "jmp_NPU"
+                    },
+                    {
+                        "name": "学校历史",
+                        "color": "bg-gradual-pink",
+                        "bindtap": "jmp_NPU"
+                    },
+                    {
+                        "name": "箐箐校园",
+                        "color": "bg-gradual-green",
+                        "bindtap": "jmp_NPU"
+                    }
+
+                ]
+            },
+            {
+                "name": "课外阅读",
+                "acts": [
                     {
                         "name": "科学史话",
                         "color": "bg-gradual-green"
@@ -26,15 +48,11 @@ Page({
                     {
                         "name": "悦读书籍",
                         "color": "bg-gradual-pink"
-                    },
-                    {
-                        "name": "学习答题",
-                        "color": "bg-gradual-orange"
-                    },
+                    }
                 ]
             },
             {
-                "name": "课外阅读",
+                "name": "实践活动",
                 "acts": [
 
                 ]
@@ -42,7 +60,10 @@ Page({
             {
                 "name": "学科竞赛",
                 "acts": [
-
+                    {
+                        "name": "学习答题",
+                        "color": "bg-gradual-orange"
+                    }
                 ]
             }
 
@@ -115,8 +136,25 @@ Page({
             choose: index
         })
     },
-    onShow() {
-
+    jmp_lesson() {
+        wx.navigateTo({
+            url: './lesson/lesson',
+        })
     },
+    jmp_live() {
+        wx.navigateTo({
+            url: './live/live',
+        })
+    },
+    jmp_listen() {
+        wx.navigateTo({
+            url: './listen/listen',
+        })
+    },
+    jmp_NPU() {
+        wx.navigateTo({
+            url: './../article/NPU/NPU',
+        })
+    }
 
 })

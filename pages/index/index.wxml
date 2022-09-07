@@ -10,7 +10,7 @@
         style="height:40%;width:60%;position:absolute;left:0;top:{{HeadBar}}rpx;z-index: 10;">
 
     </image>
-    <button class="padding-xs cu-btn round bg-gradual-orange"
+    <button class="padding-xs cu-btn round bg-gradual-orange" bindtap="jmp_lesson"
         style="position: absolute; top:{{HeadBar+PicHeight+20}}rpx;left:40rpx;width:200rpx;height:auto">
         <view class="myTxtCenter" style="font-weight: 300;">
             主题课程
@@ -29,19 +29,21 @@
 <view class="xs radius-xx shadow-warp bg-white margin-top grid col-4 margin-bottom text-center"
     style="height:{{centerHeight}}rpx;width:90%;margin: auto;position: relative;bottom:60rpx;">
     <view class="padding-sm">
-        <image mode="aspectFit" src=".././../image/index/1.png" style="height:80%;width:80%"></image>
+        <image mode="aspectFit" src=".././../image/index/1.png" bindtap="jmp_lesson" style="height:80%;width:80%">
+        </image>
         <text class="" style="font-weight: 600;">
             微课
         </text>
     </view>
     <view class="padding-sm">
-        <image mode="aspectFit" src=".././../image/index/2.png" style="height:80%;width:80%"></image>
+        <image mode="aspectFit" src=".././../image/index/2.png" bindtap="jmp_live" style="height:80%;width:80%"></image>
         <text class="" style="font-weight: 600;">
             直播
         </text>
     </view>
     <view class="padding-sm">
-        <image mode="aspectFit" src=".././../image/index/3.png" style="height:80%;width:80%"></image>
+        <image mode="aspectFit" src=".././../image/index/3.png" bindtap="jmp_listen" style="height:80%;width:80%">
+        </image>
         <text class="" style="font-weight: 600;">
             听书
         </text>
@@ -69,7 +71,7 @@
 
     </view>
     <view class="actContainer grid col-3 margin-lg" style="margin-top: 0;">
-        <view class="padding-xs" wx:for="{{activities[choose].acts}}">
+        <view class="padding-xs" wx:for="{{activities[choose].acts}}" bindtap="{{item.bindtap}}">
             <view class="radius-x {{item.color}} " style="height:170rpx;opacity: 0.9;">
                 <view class="myTxtCenter"
                     style="height: 100rpx;font-size: large;font-weight:600;color: rgba(240, 248, 255, 0.9);margin-top: 10rpx;">

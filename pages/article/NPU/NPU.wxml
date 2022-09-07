@@ -1,0 +1,57 @@
+<import src="../../../wxParse/wxParse.wxml" />
+
+<view class="" style="position:fixed;height:{{HeadBar}}rpx;width:100%;background-color:#2F9A16;z-index: 9999;">
+    <view class="" style="height:{{StatusHeight}}rpx;width:100%;">
+
+    </view>
+    <navigator class='action' id="main-back" open-type="navigateBack" delta="1" hover-class="none">
+        <view class="cuIcon-back"
+            style="height: {{navigationHeight}}rpx;width: {{navigationHeight}}rpx;top: {{StatusHeight+navigationHeight*0.2}}rpx;position:absolute;font-size: {{navigationHeight*0.6}}rpx;">
+
+        </view>
+    </navigator>
+    <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
+        毓秀工大
+    </view>
+</view>
+<view class="" style="height:{{HeadBar}}rpx">
+
+</view>
+<!-- <view wx:if="{{!hidden && article.more.thumbnail}}" class="bg-img padding-top-xl flex align-end" style="background-image: url(' {{article.more.thumbnail+'!art'}}');height: 414rpx;"> -->
+<view wx:if="{{article.more.thumbnail}}" class="bg-img padding-top-xl flex align-end"
+    style="background-image: url(' {{article.more.thumbnail+'!art'}}');height: 414rpx;">
+    <view class="text-bold text-xl bg-shadeBottom padding padding-top-xl flex-sub">
+        {{article.post_title}}
+    </view>
+</view>
+<view wx:if="{{article.more.photos[0].url}}" class="bg-img padding-top-xl flex align-end"
+    style="background-image: url(' {{article.more.photos[0].url}}');height: 414rpx;">
+    <view class="text-bold text-xl bg-shadeBottom padding padding-top-xl flex-sub">
+        {{article.post_title}}
+    </view>
+</view>
+<!-- <image mode="aspectFit" src="{{}}" style="width:90%;margin-left: auto;"></image> -->
+<view class='margin-xl bg-white padding-xl radius shadow-lg' style="padding-bottom:20rpx;">
+    <!-- <view wx:if="{{!article.more.thumbnail}}" class='text-center margin-bottom text-lg  text-grey'>{{article.post_title}}</view> -->
+    <!-- <view wx:if="{{hidden}}" class='text-center margin-bottom text-lg  text-grey'> -->
+
+    <view hidden class='text-center margin-bottom text-lg  text-grey'>{{article.post_title}}</view>
+    <view class='text-lg text-content50'>
+        <!-- <view wx:if="{{!hidden}}"> -->
+
+        <view><template is="wxParse" data="{{wxParseData:articleContent.nodes}}" /></view>
+        <!-- <image  wx:if="{{hidden}}" src="{{article.more.thumbnail}}"></image> -->
+
+    </view>
+    <view class="grid col-3" style="padding-bottom:10px;justify-content: space-around;">
+        <view class="margin-tb-sm text-center">
+            <button class="cu-btn round bg-olive" bindtap="onLikeTap"
+                style="width:90%">点赞({{article.post_like}})</button>
+        </view>
+
+        <view class="margin-tb-sm text-center">
+            <button class="cu-btn round bg-orange" bindtap="onFavoriteTap" style="width:90%">收藏<view class="cuIcon-like"
+                    style="margin-left:2px"></view></button>
+        </view>
+    </view>
+</view>

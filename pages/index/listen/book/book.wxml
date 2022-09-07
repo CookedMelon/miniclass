@@ -1,0 +1,35 @@
+<view class="" style="position:absolute;height:{{HeadBar}}rpx;width:100%;background-color:#2F9A16;z-index: 9999;">
+    <view class="" style="height:{{StatusHeight}}rpx;width:100%;">
+
+    </view>
+    <navigator class='action' id="main-back" open-type="navigateBack" delta="1" hover-class="none">
+        <view class="cuIcon-back"
+            style="height: {{navigationHeight}}rpx;width: {{navigationHeight}}rpx;top: {{StatusHeight+navigationHeight*0.2}}rpx;position:absolute;font-size: {{navigationHeight*0.6}}rpx;">
+
+        </view>
+    </navigator>
+    <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
+        听书
+    </view>
+</view>
+<view class="" style="height:{{HeadBar}}rpx">
+
+</view>
+<view class="" style="background-color: #f1f1f1;">
+    <view class="cu-item solids-top solids-bottom arrow" data-index="{{index}}"
+        style="height:150rpx;margin:auto;margin-left:10rpx;margin-right:10rpx;background-color:white;display: flex;flex-direction: row;">
+        <image class="" src=" {{book.img}}" mode="aspectFit"
+            style="height:90%;margin:auto;flex:1;margin-left: 30rpx;margin-right: 50rpx;">
+
+        </image>
+        <view class="padding" style="padding-left:0;flex:5;display: flex;flex-direction: column;">
+            <view style="font-size: larger;display: flex;align-items: center;flex:1">
+                {{book.name}}
+            </view>
+            <view style="font-size: medium;display: flex;align-items: center;flex:1;color: grey;">
+                {{book.author}}
+            </view>
+        </view>
+
+    </view>
+</view>

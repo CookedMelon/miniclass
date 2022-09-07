@@ -1,0 +1,25 @@
+<view class="" style="position:absolute;height:{{HeadBar}}rpx;width:100%;background-color:#2F9A16;z-index: 9999;">
+    <view class="" style="height:{{StatusHeight}}rpx;width:100%;">
+
+    </view>
+    <navigator class='action' id="main-back" open-type="navigateBack" delta="1" hover-class="none">
+        <view class="cuIcon-back"
+            style="height: {{navigationHeight}}rpx;width: {{navigationHeight}}rpx;top: {{StatusHeight+navigationHeight*0.2}}rpx;position:absolute;font-size: {{navigationHeight*0.6}}rpx;">
+
+        </view>
+    </navigator>
+
+    <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
+        {{section.name}}
+    </view>
+</view>
+<view class="" style="height:{{HeadBar}}rpx">
+
+</view>
+
+
+<video class="" src="https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4" style="width:100%">
+</video>
+<view class="padding-lg" style="font-size: larger;">
+    简介:{{section.description}}
+</view>
