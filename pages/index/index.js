@@ -10,22 +10,32 @@ Page({
                     {
                         "name": "毓秀工大",
                         "color": "bg-gradual-red",
-                        "bindtap": "jmp_NPU"
+                        "bindtap": "jmp_NPU",
+                        "id": "17"
                     },
                     {
-                        "name": "文化工大",
+                        "name": "科学史话",
                         "color": "bg-gradual-blue",
-                        "bindtap": "jmp_NPU"
+                        "bindtap": "jmp_NPU",
+                        "id": "19"
                     },
                     {
-                        "name": "学校历史",
+                        "name": "人物春秋",
                         "color": "bg-gradual-pink",
-                        "bindtap": "jmp_NPU"
+                        "bindtap": "jmp_NPU",
+                        "id": "18"
                     },
                     {
-                        "name": "箐箐校园",
+                        "name": "悦学经典",
                         "color": "bg-gradual-green",
-                        "bindtap": "jmp_NPU"
+                        "bindtap": "jmp_NPU",
+                        "id": "23"
+                    },
+                    {
+                        "name": "悦读书籍",
+                        "color": "bg-gradual-orange",
+                        "bindtap": "jmp_NPU",
+                        "id": "24"
                     }
 
                 ]
@@ -136,6 +146,11 @@ Page({
             choose: index
         })
     },
+    jmp_promotional() {
+        wx.navigateTo({
+            url: './promotional/promotional'
+        })
+    },
     jmp_lesson() {
         wx.navigateTo({
             url: './lesson/lesson',
@@ -146,15 +161,19 @@ Page({
             url: './live/live',
         })
     },
-    jmp_listen() {
+    jmp_NPU(e) {
+        console.log(e)
+        var classify = e.currentTarget.dataset.classify;
+        var url = '../article/menu/menu?id=' + classify.id + "&name=" + classify.name;
         wx.navigateTo({
-            url: './listen/listen',
+            url: url,
         })
     },
-    jmp_NPU() {
+    jmp_exercise() {
         wx.navigateTo({
-            url: './../article/NPU/NPU',
+            url: './exercise/exercise',
         })
     }
 
 })
+

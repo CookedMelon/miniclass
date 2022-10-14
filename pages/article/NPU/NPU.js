@@ -7,6 +7,13 @@ Page({
     },
 
     onLoad(options) {
+        // console.log(options);
+        var params = {};
+        params.id = options.id;
+        params.name = options.name;
+        this.setData({
+            params: params
+        })
         var pxToRpxScale = app.globalData.pxToRpxScale
         var StatusHeight = app.globalData.ktxStatusHeight * pxToRpxScale;
         var navigationHeight = app.globalData.navigationHeight * pxToRpxScale;
@@ -23,20 +30,24 @@ Page({
             allHeight: allHeight
         })
         api.get({//请求后端返回数据
-            url: 'portal/articles/92',
+            url: 'portal/articles/' + this.data.params.id,
             data: {},
             success: data => {
-                console.log(data)
                 wx.hideNavigationBarLoading();
                 if (data.code) {
 
                     //初始化文章内容
+                    var section = data.data;
+                    section.post_index = section.post_title.substring(section.post_title.length - 6);
+                    console.log(section.post_index)
+                    section.post_title = section.post_title.substring(0, section.post_title.length - 6);
+                    console.log(section.post_title)
                     this.setData({
-                        article: data.data
+                        article: section
                     });
-                    WxParse.wxParse('articleContent', 'html', data.data.post_content, this, 30);
-                    wx.setNavigationBarTitle({
-                        title: data.data.post_title
+                    WxParse.wxParse('articleContent', 'html', section.post_content, this, 30);
+                    this.setData({
+                        title: section.post_title
                     });
                     wx.hideLoading({
                         complete: (res) => { },
@@ -51,12 +62,15 @@ Page({
             }
         });
     },
+    delHtmlTag(str) {
+        return str.replace(/<[^>]+>/g, "");//去掉所有的html标记
+    },
     onLikeTap(e) {
         api.post({
             url: 'portal/articles/doLike',
             data: {
                 // id: this.params.id
-                id: 92
+                id: parseInt(this.data.params.id)
             },
             success: data => {
                 if (data.code) {

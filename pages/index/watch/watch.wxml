@@ -10,16 +10,15 @@
     </navigator>
 
     <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
-        {{section.name}}
+        {{sections[sectionindex].post_title}}
     </view>
 </view>
 <view class="" style="height:{{HeadBar}}rpx">
 
 </view>
 
-
-<video class="" src="https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4" style="width:100%">
+<video class="" src="https://s-bj-4514-miniclassvideo.oss.dogecdn.com/%E8%85%BE%E8%AE%AF%E4%BC%9A%E8%AE%AE%202022-09-18%2011-54-46.mp4" style="width:100%">
 </video>
 <view class="padding-lg" style="font-size: larger;">
-    简介:{{section.description}}
+    简介:{{sections[sectionindex].post_excerpt}}
 </view>

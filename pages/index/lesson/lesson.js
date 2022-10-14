@@ -1,4 +1,5 @@
 const app = getApp();
+var api = require('../../../utils/api.js');
 Page({
 
     /**
@@ -6,111 +7,6 @@ Page({
      */
     data: {
         choice: 0,
-        lessonlist:
-            [
-                {
-                    "name": "C程序设计",
-                    "sections": [
-                        {
-                            "name": "C语言基础",
-                            "pic": "https://i1.hdslb.com/bfs/archive/2ac43b72c2da07b03704ebf3b9a80d5e6bb34864.jpg@672w_378h_1c.webp",
-                            "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "指针，是C语言中的一个重要概念及其特点，也是掌握C语言比较困难的部分。指针也就是内存地址，指针变量是用来存放内存地址的变量，在同一CPU构架下，不同类型的指针变量所占用的存储单元长度是相同的，而存放数据的变量因数据的类型不同，所占用的存储空间长度也不同。有了指针以后，不仅可以对数据本身，也可以对存储数据的变量地址进行操作。 "
-                        },
-                        {
-                            "name": "字符", "pic": "https://i1.hdslb.com/bfs/archive/2ac43b72c2da07b03704ebf3b9a80d5e6bb34864.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "指针，是C语言中的一个重要概念及其特点，也是掌握C语言比较困难的部分。指针也就是内存地址，指针变量是用来存放内存地址的变量，在同一CPU构架下，不同类型的指针变量所占用的存储单元长度是相同的，而存放数据的变量因数据的类型不同，所占用的存储空间长度也不同。有了指针以后，不仅可以对数据本身，也可以对存储数据的变量地址进行操作。 "
-                        },
-                        {
-                            "name": "输入输出流", "pic": "https://i1.hdslb.com/bfs/archive/2ac43b72c2da07b03704ebf3b9a80d5e6bb34864.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "指针，是C语言中的一个重要概念及其特点，也是掌握C语言比较困难的部分。指针也就是内存地址，指针变量是用来存放内存地址的变量，在同一CPU构架下，不同类型的指针变量所占用的存储单元长度是相同的，而存放数据的变量因数据的类型不同，所占用的存储空间长度也不同。有了指针以后，不仅可以对数据本身，也可以对存储数据的变量地址进行操作。 "
-                        },
-                        {
-                            "name": "数据结构", "pic": "https://i1.hdslb.com/bfs/archive/2ac43b72c2da07b03704ebf3b9a80d5e6bb34864.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "指针，是C语言中的一个重要概念及其特点，也是掌握C语言比较困难的部分。指针也就是内存地址，指针变量是用来存放内存地址的变量，在同一CPU构架下，不同类型的指针变量所占用的存储单元长度是相同的，而存放数据的变量因数据的类型不同，所占用的存储空间长度也不同。有了指针以后，不仅可以对数据本身，也可以对存储数据的变量地址进行操作。 "
-                        },
-                        {
-                            "name": "循环结构", "pic": "https://i1.hdslb.com/bfs/archive/2ac43b72c2da07b03704ebf3b9a80d5e6bb34864.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "指针，是C语言中的一个重要概念及其特点，也是掌握C语言比较困难的部分。指针也就是内存地址，指针变量是用来存放内存地址的变量，在同一CPU构架下，不同类型的指针变量所占用的存储单元长度是相同的，而存放数据的变量因数据的类型不同，所占用的存储空间长度也不同。有了指针以后，不仅可以对数据本身，也可以对存储数据的变量地址进行操作。 "
-                        },
-                        {
-                            "name": "函数", "pic": "https://i1.hdslb.com/bfs/archive/2ac43b72c2da07b03704ebf3b9a80d5e6bb34864.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "指针，是C语言中的一个重要概念及其特点，也是掌握C语言比较困难的部分。指针也就是内存地址，指针变量是用来存放内存地址的变量，在同一CPU构架下，不同类型的指针变量所占用的存储单元长度是相同的，而存放数据的变量因数据的类型不同，所占用的存储空间长度也不同。有了指针以后，不仅可以对数据本身，也可以对存储数据的变量地址进行操作。 "
-                        },
-                        {
-                            "name": "指针", "pic": "https://i1.hdslb.com/bfs/archive/2ac43b72c2da07b03704ebf3b9a80d5e6bb34864.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "指针，是C语言中的一个重要概念及其特点，也是掌握C语言比较困难的部分。指针也就是内存地址，指针变量是用来存放内存地址的变量，在同一CPU构架下，不同类型的指针变量所占用的存储单元长度是相同的，而存放数据的变量因数据的类型不同，所占用的存储空间长度也不同。有了指针以后，不仅可以对数据本身，也可以对存储数据的变量地址进行操作。 "
-                        },
-                        {
-                            "name": "数组", "pic": "https://i1.hdslb.com/bfs/archive/2ac43b72c2da07b03704ebf3b9a80d5e6bb34864.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "指针，是C语言中的一个重要概念及其特点，也是掌握C语言比较困难的部分。指针也就是内存地址，指针变量是用来存放内存地址的变量，在同一CPU构架下，不同类型的指针变量所占用的存储单元长度是相同的，而存放数据的变量因数据的类型不同，所占用的存储空间长度也不同。有了指针以后，不仅可以对数据本身，也可以对存储数据的变量地址进行操作。 "
-                        }
-                    ]
-                },
-                {
-                    "name": "计算机系统基础",
-                    "sections": [
-                        {
-                            "name": "C程序举例", "pic": "https://i0.hdslb.com/bfs/archive/9940b0b7b1c80e6a142c50416d031cd3e5e88677.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "冯诺依曼结构", "pic": "https://i0.hdslb.com/bfs/archive/9940b0b7b1c80e6a142c50416d031cd3e5e88677.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "计算机系统层次", "pic": "https://i0.hdslb.com/bfs/archive/9940b0b7b1c80e6a142c50416d031cd3e5e88677.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "二进制", "pic": "https://i0.hdslb.com/bfs/archive/9940b0b7b1c80e6a142c50416d031cd3e5e88677.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "补码", "pic": "https://i0.hdslb.com/bfs/archive/9940b0b7b1c80e6a142c50416d031cd3e5e88677.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "浮点数编码表示", "pic": "https://i0.hdslb.com/bfs/archive/9940b0b7b1c80e6a142c50416d031cd3e5e88677.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "IA-32指令集", "pic": "https://i0.hdslb.com/bfs/archive/9940b0b7b1c80e6a142c50416d031cd3e5e88677.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        }
-                    ]
-                },
-                {
-                    "name": "Windows程序设计",
-                    "sections": [
-                        {
-                            "name": "课程介绍", "pic": "https://i2.hdslb.com/bfs/archive/ba1bd7e60ce43c25e5538ce3cc2fff5e9632a30c.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "线程", "pic": "https://i2.hdslb.com/bfs/archive/ba1bd7e60ce43c25e5538ce3cc2fff5e9632a30c.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "图形界面", "pic": "https://i2.hdslb.com/bfs/archive/ba1bd7e60ce43c25e5538ce3cc2fff5e9632a30c.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "GUI编程", "pic": "https://i2.hdslb.com/bfs/archive/ba1bd7e60ce43c25e5538ce3cc2fff5e9632a30c.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "Windows文件编码格式", "pic": "https://i2.hdslb.com/bfs/archive/ba1bd7e60ce43c25e5538ce3cc2fff5e9632a30c.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        },
-                        {
-                            "name": "Windows服务开发框架", "pic": "https://i2.hdslb.com/bfs/archive/ba1bd7e60ce43c25e5538ce3cc2fff5e9632a30c.jpg@672w_378h_1c.webp", "video": "https://kvideo01.youju.sohu.com/d3dcfbe9-3d52-4ae3-8b51-0988c28881222_0_0.mp4",
-                            "description": "这是简介"
-                        }
-                    ]
-                }
-            ],
-
     },
 
     showModal(e) {
@@ -139,14 +35,119 @@ Page({
             bottom: bottom,
             allHeight: allHeight
         })
-        getApp().globalData.lesson = this.data.lessonlist[this.data.choice];
+        // getApp().globalData.lesson = this.data.lessonlist[this.data.choice];
+        this.getfatherid();
+
+
+    },
+    getlessonids() {
+        var that = this;
+        var fatherid = this.data.fatherid;
+        console.log("fatherid", fatherid)
+        api.get({
+            url: 'portal/categories/subCategories',
+            data: {
+                category_id: fatherid,
+                order: '+list_order',
+                field: "id,name"
+            },
+            success: (res) => {
+                var data = res.data.categories;
+                if (data.length) {
+                    that.setData({
+                        lessonlist: data
+                    })
+                }
+            },
+            complete: (res) => {
+                console.log("com", res);
+                that.getsections()
+            }
+
+        })
+    },
+    getsections() {
+        var that = this;
+        var choice = this.data.choice;
+        var choiceid = this.data.lessonlist[choice].id;
+        api.get({
+            url: 'portal/lists/getCategoryPostLists',
+            data: {
+                category_id: choiceid,
+                order: '+list_order',
+                field: "more,post_excerpt,post_title,post_keywords"
+            },
+            success: (res) => {
+                var sections = res.data.list;
+                console.log("sections", sections)
+                that.setData({
+                    sections: sections
+                })
+            },
+            complete: (res) => {
+                console.log("comsec");
+                // that.getsections()
+            }
+
+        })
+    },
+    // getlessons() {
+    //     api.get({
+    //         url: 'portal/lists/getCategoryPostLists',
+    //         data: {
+    //             // field: "list_order,name,seo_title,id", //限制字段段来加速
+    //             category_id: 21,
+    //             // limit:100
+    //             // list_order: "=10000", //默认顺序即可
+    //         },
+    //         success: data => {
+    //             console.log(data)
+    //         },
+    //         complete: () => {
+
+    //         }
+    //     });
+    // },
+    getfatherid() {
+        var that = this;
+        api.get({
+            url: 'portal/categories',
+            data: {
+                // field: "list_order,name,seo_title,id", //限制字段段来加速
+                // category_id: 21,
+                // limit:100
+                // list_order: "=10000", //默认顺序即可
+                field: "id,name",
+                limit: 100
+            },
+            success: data => {
+                var data = data.data.list;
+                // console.log(data)
+                for (var i = 0; i < data.length; i++) {
+                    // console.log(data[i].name)
+                    if (data[i].name == "视频播放") {
+                        that.setData({
+                            fatherid: data[i].id
+                        })
+                        console.log(that.data.fatherid)
+                        break;
+                    }
+                }
+            },
+            complete: () => {
+                that.getlessonids();
+            }
+        });
     },
     jmp_watch(e) {
         var index = e.currentTarget.dataset.index
+        getApp().globalData.lessonname = this.data.lessonlist[this.data.choice].name;
+        getApp().globalData.sectionindex = index;
+        getApp().globalData.sections = this.data.sections;
         wx.navigateTo({
             url: '../watch/watch',
         })
-        getApp().globalData.lessonindex = index;
+
 
     },
     chooseLesson(e) {
@@ -155,6 +156,7 @@ Page({
             choice: index
         })
         this.hideModal();
-        getApp().globalData.lesson = this.data.lessonlist[index];
+        this.getsections();
+        // getApp().globalData.lesson = this.data.lessonlist[index];
     }
 })

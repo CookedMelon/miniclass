@@ -62,4 +62,9 @@ Page({
         })
 
     },
+    jmp_lesson() {
+        wx.navigateTo({
+            url: '../index/lesson/lesson',
+        })
+    },
 })

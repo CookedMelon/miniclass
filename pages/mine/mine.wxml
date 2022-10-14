@@ -14,7 +14,7 @@
 
 <view class="xs radius-xx shadow-warp bg-white margin-top margin-bottom text-center "
     style="height: auto;width:90%;margin:auto;">
-    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;" bindtap="jmp_lesson">
         <image class="" src="../../image/mine/lesson.png" mode="aspectFit"
             style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
         </image>

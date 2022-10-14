@@ -1,0 +1,45 @@
+<view class="" style="position:fixed;height:{{HeadBar}}rpx;width:100%;background-color:#2F9A16;z-index: 9999;">
+    <view class="" style="height:{{StatusHeight}}rpx;width:100%;">
+
+    </view>
+    <navigator class='action' id="main-back" open-type="navigateBack" delta="1" hover-class="none">
+        <view class="cuIcon-back"
+            style="height: {{navigationHeight}}rpx;width: {{navigationHeight}}rpx;top: {{StatusHeight+navigationHeight*0.2}}rpx;position:absolute;font-size: {{navigationHeight*0.6}}rpx;">
+
+        </view>
+    </navigator>
+    <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
+        {{name}}
+    </view>
+</view>
+<view class="" style="height:{{HeadBar}}rpx">
+
+</view>
+
+<!-- <view class="myTxtCenter" style="height:100rpx;widthL100%;background-color: #f1f1f1;font-size: larger;">
+    
+</view> -->
+<view class="" style="background-color: #f1f1f1;">
+    <view class="cu-item solids-top solids-bottom arrow" bindtap="jmp_art" data-index="{{item.id}}"
+        style="height:auto;margin:auto;margin-left:10rpx;padding-top:10rpx;padding-bottom:10rpx;margin-right:10rpx;background-color:white;display: flex;flex-direction: row;"
+        wx:for="{{sections}}">
+        <view class="myTxtCenter radius-xx"
+            style="margin:auto;margin-left:10rpx;margin-right:10rpx;padding:20rpx;background-color:antiquewhite;font-size: larger;width:10%;font-weight: 600;">
+            {{index+1}}
+        </view>
+        <view class="radius-x"
+            style="display: flex;font-size: larger;flex:3;justify-content: center;background-color: rgba(128, 128, 128, 0.219);margin:20rpx;padding-left:20rpx;padding-right: 20rpx;padding-top:10rpx;padding-bottom:10rpx;flex-direction: column;">
+            <view style="font-weight: 600;">
+                {{item.post_index}}
+            </view>
+            <view class="" hover-class="none" hover-stop-propagation="false">
+                {{item.post_title}}
+            </view>
+
+        </view>
+
+    </view>
+    <view class="" style="height:200rpx">
+
+    </view>
+</view>

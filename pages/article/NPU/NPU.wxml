@@ -11,7 +11,7 @@
         </view>
     </navigator>
     <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
-        毓秀工大
+        {{title}}
     </view>
 </view>
 <view class="" style="height:{{HeadBar}}rpx">
@@ -36,13 +36,11 @@
     <!-- <view wx:if="{{hidden}}" class='text-center margin-bottom text-lg  text-grey'> -->
 
     <view hidden class='text-center margin-bottom text-lg  text-grey'>{{article.post_title}}</view>
-    <view class='text-lg text-content50'>
-        <!-- <view wx:if="{{!hidden}}"> -->
-
+    <!-- <view class='text-lg text-content50'>
         <view><template is="wxParse" data="{{wxParseData:articleContent.nodes}}" /></view>
-        <!-- <image  wx:if="{{hidden}}" src="{{article.more.thumbnail}}"></image> -->
 
-    </view>
+    </view> -->
+    <rich-text nodes="{{article.post_content}}"></rich-text>
     <view class="grid col-3" style="padding-bottom:10px;justify-content: space-around;">
         <view class="margin-tb-sm text-center">
             <button class="cu-btn round bg-olive" bindtap="onLikeTap"
