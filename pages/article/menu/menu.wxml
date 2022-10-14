@@ -19,7 +19,7 @@
 <!-- <view class="myTxtCenter" style="height:100rpx;widthL100%;background-color: #f1f1f1;font-size: larger;">
     
 </view> -->
-<view class="" style="background-color: #f1f1f1;">
+<view class="" style="background-color: #f1f1f1;width:100%">
     <view class="cu-item solids-top solids-bottom arrow" bindtap="jmp_art" data-index="{{item.id}}"
         style="height:auto;margin:auto;margin-left:10rpx;padding-top:10rpx;padding-bottom:10rpx;margin-right:10rpx;background-color:white;display: flex;flex-direction: row;"
         wx:for="{{sections}}">
@@ -27,15 +27,24 @@
             style="margin:auto;margin-left:10rpx;margin-right:10rpx;padding:20rpx;background-color:antiquewhite;font-size: larger;width:10%;font-weight: 600;">
             {{index+1}}
         </view>
+        <!-- {{colors[item.color]}} -->
         <view class="radius-x"
-            style="display: flex;font-size: larger;flex:3;justify-content: center;background-color: rgba(128, 128, 128, 0.219);margin:20rpx;padding-left:20rpx;padding-right: 20rpx;padding-top:10rpx;padding-bottom:10rpx;flex-direction: column;">
-            <view style="font-weight: 600;">
-                {{item.post_index}}
+            style="display: flex;font-size: larger;flex:3;justify-content: center;background-color: {{colors[item.color]}};margin:20rpx;padding-left:20rpx;padding-top:30rpx;padding-bottom:30rpx;flex-direction: row;">
+            <view class="" style="flex-direction:column;width:90%">
+                <view style="font-weight: 600;width:80%">
+                    {{item.post_index}}
+                </view>
+                <view class="" style="">
+                    {{item.post_title}}
+                </view>
             </view>
-            <view class="" hover-class="none" hover-stop-propagation="false">
-                {{item.post_title}}
-            </view>
+            <view class="cuIcon-moreandroid" style="width:10%;margin-right: 10rpx;">
 
+            </view>
+            <image class="" src="../../../image/logo.png"
+                style="position:absolute;right:50rpx;height:100rpx;width:100rpx;z-index: 99;opacity: 0.2;">
+
+            </image>
         </view>
 
     </view>

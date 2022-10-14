@@ -7,6 +7,9 @@ Page({
      */
     data: {
         choice: 0,
+        colors: [
+            'rgba(17, 156, 211, 0.219)', 'rgba(255, 0, 0, 0.20)', 'rgba(143, 14, 230, 0.23)', 'rgba(240, 134, 13, 0.219)', 'rgba(8, 206, 241, 0.219)', 'rgba(144, 10, 185, 0.219)', 'rgba(194, 224, 22, 0.39)'
+        ]
     },
     onLoad(options) {
         var pxToRpxScale = app.globalData.pxToRpxScale
@@ -56,6 +59,8 @@ Page({
                     sections[i].post_index = sections[i].post_title.substring(sections[i].post_title.length - 6);
                     console.log(sections[i].post_index)
                     sections[i].post_title = sections[i].post_title.substring(0, sections[i].post_title.length - 6);
+                    sections[i].color = i % this.data.colors.length;
+                    console.log(sections[i].color)
                 }
                 that.setData({
                     sections: sections
