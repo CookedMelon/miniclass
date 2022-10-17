@@ -23,15 +23,10 @@
     <view class="cu-item solids-top solids-bottom arrow" bindtap="jmp_art" data-index="{{item.id}}"
         style="height:auto;margin:auto;margin-left:10rpx;padding-top:10rpx;padding-bottom:10rpx;margin-right:10rpx;background-color:white;display: flex;flex-direction: row;"
         wx:for="{{sections}}">
-        <view class="myTxtCenter radius-xx"
-            style="margin:auto;margin-left:10rpx;margin-right:10rpx;padding:20rpx;background-color:antiquewhite;font-size: larger;width:10%;font-weight: 600;">
-            <view class="" style="z-index: 2;">
-                {{index+1}}
-            </view>
-            <image class="" src="../../../image/flag.png" mode="aspectFill"
-                style="position:absolute;width:80rpx;height: 80rpx;z-index: 1;opacity: 0.5;">
+        <view class="myTxtCenter radius-xx cuIcon-title "
+            style="margin:auto;margin-left:10rpx;margin-right:10rpx;padding:20rpx;background-color:rgba(176, 238, 152, 0.603);width:10%;font-weight: 600;font-size: medium;">
+            {{index+1}}
 
-            </image>
         </view>
         <!-- {{colors[item.color]}} -->
         <view class="radius-x"

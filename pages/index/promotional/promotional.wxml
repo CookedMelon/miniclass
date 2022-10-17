@@ -16,6 +16,9 @@
 
 </view>
 <view class="radius-xxx" style="width:90%;margin:5%;background-color:rgb(253, 253, 253)">
+    <view class="" style="height:50rpx">
+
+    </view>
     <view class="myTxtCenter"
         style="height:100rpx;font-size: 50rpx; left: 91rpx; top: -31rpx; color: rgb(63, 134, 241); font-weight: 600">
         计算机基础教学课程思政课程
