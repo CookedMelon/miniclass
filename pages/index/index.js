@@ -84,9 +84,8 @@ Page({
 
     onLoad() {
         this.setData({
-            centerHeight: 200
+            centerHeight: 200,
         })
-
         var pxToRpxScale = app.globalData.pxToRpxScale
         var StatusHeight = app.globalData.ktxStatusHeight * pxToRpxScale;
         var navigationHeight = app.globalData.navigationHeight * pxToRpxScale;
@@ -124,6 +123,7 @@ Page({
 
     },
     onShow() {
+     
         const that = this;
         this.setData({
             getPicHeight: setInterval(function () {

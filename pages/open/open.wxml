@@ -1,0 +1,6 @@
+ <!-- 开屏 -->
+ <view wx:if='{{kaiping}}' style=' position: fixed;top: 0;left: 0;display: flex;flex-direction: row;justify-content: center;align-items: center;width: 100%;height: 100%;z-index: 99999999;background:#a00b0a;'>
+    <view style='position: fixed;'>
+        <video src="https://s-bj-4514-miniclassvideo.oss.dogecdn.com/%E5%BC%80%E5%A4%B4%E5%8A%A8%E7%94%BB.mp4" style='width:800rpx;height:{{allHeight}}rpx' controls='{{true}}' autoplay='{{true}}' bindfullscreenchange="fullScreen"	show-fullscreen-btn='{{false}}'	show-play-btn='{{false}}' object-fit='fill' 	show-progress='{{false}}'/>
+    </view>
+</view>

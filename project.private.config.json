@@ -91,6 +91,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/open/open",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
