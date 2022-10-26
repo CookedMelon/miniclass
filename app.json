@@ -12,8 +12,8 @@
     "pages/article/NPU/NPU",
     "pages/index/exercise/exercise",
     "pages/article/menu/menu",
-    "pages/open",
-    "pages/open/open"
+    "pages/open/open",
+    "pages/index/listen/player/player"
   ],
   "tabBar": {
     "color": "#464a56",
@@ -35,13 +35,22 @@
       }
     ]
   },
+  "requiredBackgroundModes": ["audio", "location"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
   },
+  "plugins": {
+    "xmly-plugin": {
+      "version": "3.3.3",
+      "provider": "wxc6a13dda5815c529"
+    }
+
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
   "cloud": true
 }

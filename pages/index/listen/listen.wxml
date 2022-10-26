@@ -35,6 +35,5 @@
                 {{item.author}}
             </view>
         </view>
-
     </view>
 </view>

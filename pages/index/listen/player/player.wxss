@@ -1,0 +1,136 @@
+page{
+  background-color: rgb(95, 91, 91);
+}
+.player-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  background: gray;
+}
+
+.player-wrap .player-bg {
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300%;
+  height: 300%;
+  transition: background-image 1s;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: blur(400rpx);
+  backdrop-filter: blur(10rpx);
+}
+
+.player-wrap .player-bg::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.player-wrap .info-wrap {
+  margin-top: 180rpx;
+  z-index: 1;
+}
+
+.info-wrap .cover-image-wrap {
+  width: 360rpx;
+  height: 360rpx;
+  margin: 0 auto 30rpx;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 20%;
+}
+
+.info-wrap .cover-image-wrap .cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info-wrap .title {
+  margin-top: 100rpx;
+  padding: 0 60rpx;
+  color: #fff;
+  font-size: 42rpx;
+  text-align: center;
+}
+
+.player-wrap .control-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.player-wrap .control-wrap .btns-wrap {
+  display: flex;
+  padding: 180rpx 0;
+  justify-content: center;
+}
+
+.control-wrap .btns-wrap .play-btn {
+  width: 152rpx;
+  height: 152rpx;
+  background: url('https://fdfs.xmcdn.com/group80/M04/F1/5D/wKgPEV7Hb1_B0o3aAACdmJqvUD4638.png') no-repeat top left / 100% 300%;
+  margin: 0 20rpx;
+}
+
+.control-wrap .btns-wrap .play-btn.playing {
+  background-position: 0 -304rpx;
+}
+
+.control-wrap .btns-wrap .play-btn.paused {
+  background-position: 0 -152rpx;
+}
+
+.control-wrap .btns-wrap .play-btn.loading {
+  background-position: 0 0;
+  animation: rotate 2s infinite;
+}
+
+.control-wrap .btns-wrap .prev-btn,
+.control-wrap .btns-wrap .next-btn {
+  width: 100rpx;
+  height: 152rpx;
+  background: no-repeat center center / contain;
+}
+
+.control-wrap .btns-wrap .prev-btn {
+  background-image: url('https://fdfs.xmcdn.com/group80/M04/F1/5D/wKgPEV7Hb1_CAWujAAABdyALBBU218.png');
+}
+
+.control-wrap .btns-wrap .next-btn {
+  background-image: url('https://fdfs.xmcdn.com/group80/M04/EB/D3/wKgPDF7Hb1_Qq5xTAAABev3MCrg687.png');
+}
+
+.player-wrap .control-wrap .progress-wrap {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 350rpx;
+  width: 80%;
+}
+
+.progress-wrap .progress-box {
+  padding: 10rpx 0;
+}
+
+.progress-wrap .progress-box slider {
+  margin: 0;
+}
+
+.progress-wrap .play-progress {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 20rpx;
+}

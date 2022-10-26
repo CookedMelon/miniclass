@@ -1,6 +1,8 @@
 {
     "component": true,
-    "usingComponents": {},
+    "usingComponents": {
+        "calendar": "../../components/calendar/calendar"
+      },
     "navigationBarBackgroundColor": "#2F9A16",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "学生管理"

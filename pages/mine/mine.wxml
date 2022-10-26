@@ -11,9 +11,19 @@
         {{nickName}}
     </view>
 </view>
+<view class="xs radius-xx margin-top margin-bottom"style="width:90%;height: auto;font-size :1000;margin:auto">
+    今日是{{nowdate}}
+</view>
+<view class="radius-xx margin-top margin-bottom text-center"style="width:90%;height: auto;font-size :x-large;font-weight:600;margin:auto" wx:if="{{if_clock_in}}">
+    您已连续签到5天，继续保持！
+</view>
+
+<view class="" style="width:90%;margin:auto">
+    <calendar defaultDate="{{nowdate}}" spot="{{spot}}" bind:dateChange="dateChange"></calendar>
+</view>
 
 <view class="xs radius-xx shadow-warp bg-white margin-top margin-bottom text-center "
-    style="height: auto;width:90%;margin:auto;">
+    style="height: auto;width:90%;margin:auto;position:relative;top:-10rpx">
     <view class="" style="height:100rpx;display:flex;flex-direction: row;" bindtap="jmp_lesson">
         <image class="" src="../../image/mine/lesson.png" mode="aspectFit"
             style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
@@ -22,7 +32,7 @@
             我的课程
         </view>
     </view>
-    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;" bindtap="jmp_exercise">
         <image class="" src="../../image/mine/target.png" mode="aspectFit"
             style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
         </image>
@@ -30,15 +40,15 @@
             学习进度
         </view>
     </view>
-    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;" bindtap = "clock_in">
         <image class="" src="../../image/mine/check.png" mode="aspectFit"
             style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
         </image>
         <view class="myTxtCenter" style="margin-left:0;font-size: larger;">
-            我的打卡
+            签到打卡
         </view>
     </view>
-    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;" bindtap = "phone">
         <image class="" src="../../image/mine/phone.png" mode="aspectFit"
             style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
         </image>
@@ -46,15 +56,15 @@
             联系客服
         </view>
     </view>
-    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+    <!-- <view class="" style="height:100rpx;display:flex;flex-direction: row;">
         <image class="" src="../../image/mine/opinion.png" mode="aspectFit"
             style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
         </image>
         <view class="myTxtCenter" style="margin-left:0;font-size: larger;">
             意见反馈
         </view>
-    </view>
-    <view class="" style="height:100rpx;display:flex;flex-direction: row;">
+    </view> -->
+    <view class="" style="height:100rpx;display:flex;flex-direction: row;" bindtap = "exit">
         <image class="" src="../../image/mine/exit.png" mode="aspectFit"
             style="height:80%;width:50rpx;margin:auto;margin-left:30rpx;margin-right:30rpx">
         </image>
@@ -63,3 +73,4 @@
         </view>
     </view>
 </view>
+

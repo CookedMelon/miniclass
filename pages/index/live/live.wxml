@@ -1,20 +1,32 @@
 <view class="" style="position:absolute;height:{{HeadBar}}rpx;width:100%;background-color:#2F9A16;z-index: 9999;">
-    <view class="" style="height:{{StatusHeight}}rpx;width:100%;">
+  <view class="" style="height:{{StatusHeight}}rpx;width:100%;">
+
+  </view>
+  <navigator class='action' id="main-back" open-type="navigateBack" delta="1" hover-class="none">
+    <view class="cuIcon-back" style="height: {{navigationHeight}}rpx;width: {{navigationHeight}}rpx;top: {{StatusHeight+navigationHeight*0.2}}rpx;position:absolute;font-size: {{navigationHeight*0.6}}rpx;">
 
     </view>
-    <navigator class='action' id="main-back" open-type="navigateBack" delta="1" hover-class="none">
-        <view class="cuIcon-back"
-            style="height: {{navigationHeight}}rpx;width: {{navigationHeight}}rpx;top: {{StatusHeight+navigationHeight*0.2}}rpx;position:absolute;font-size: {{navigationHeight*0.6}}rpx;">
-
-        </view>
-    </navigator>
-    <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
-        直播
-    </view>
+  </navigator>
+  <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
+    直播
+  </view>
 </view>
 <view class="" style="height:{{HeadBar}}rpx">
 
 </view>
-<view class="myTxtCenter" style="height:100rpx;width:100%;color:grey">
-    暂无开启的直播
+<view style="height:100rpx;width:100%;color:grey">
+  <view wx:for="{{orderInfo}}" wx:key>
+    <view class="naviBlock">
+      <view class="navigator">
+        <view class="content">
+          <view style="font-weight:bold;font-size:38rpx;margin-bottom:5px;">主题：{{item.tittle}}</view>
+          <view style="color: #8B8682;font-size:30rpx">会议号：{{item.meetingNumber}}</view>
+          <view style="color: #8B8682;font-size:30rpx">主持人：{{item.host}}</view>
+        </view>
+        
+          <button class="btndel1" style="font-size:25rpx;" bindtap='toMeeting' size="mini" data-index="{{index}}">加入会议</button>
+        
+      </view>
+    </view>
+  </view>
 </view>

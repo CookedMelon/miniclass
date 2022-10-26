@@ -161,6 +161,11 @@ Page({
             url: './live/live',
         })
     },
+    jmp_listen(){
+        wx.navigateTo({
+            url: './listen/listen',
+        })
+    },
     jmp_NPU(e) {
         console.log(e)
         var classify = e.currentTarget.dataset.classify;

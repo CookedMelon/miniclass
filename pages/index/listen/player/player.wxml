@@ -1,0 +1,33 @@
+<view class="player-wrap">
+	<!-- 音频信息 -->
+	<view class="info-wrap">
+		<view class="cover-image-bg">
+			<view class="cover-image-wrap {{isPlaying ? 'playing' : ''}}" bind:tap="play">
+				<image class="cover-image" src="{{sound.coverImgUrl}}" alt="{{sound.title}}" />
+			</view>
+		</view>
+		<view class="title">{{sound.title}}</view>
+	</view>
+	<!-- 背景 -->
+	<view class="player-bg" style="background-image: url({{sound.coverImgUrl}});"></view>
+	<!-- 播放控制 -->
+	<view class="control-wrap">
+		<!-- 进度条 -->
+		<view class="progress-wrap">
+			<view class="progress-box">
+				<slider value="{{percent > 100 ? 100 : percent}}" step="0.01" max="100" min="0" block-size="12"
+					bindchange="changeProgress" bindchanging="changingProgress" />
+			</view>
+			<view class="play-progress">
+				<view class="current">{{currentTimeStr}}</view>
+				<view class="total">{{durationStr}}</view>
+			</view>
+		</view>
+		<!-- 按钮 -->
+		<view class="btns-wrap">
+			<view class="prev-btn" bind:tap="prev"></view>
+			<view class="play-btn {{isPlaying ? 'paused' : 'playing'}}" bind:tap="play"></view>
+			<view class="next-btn" bind:tap="next"></view>
+		</view>
+	</view>
+</view>
