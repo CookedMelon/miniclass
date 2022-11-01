@@ -8,7 +8,7 @@
     </view>
   </navigator>
   <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
-    直播
+    会议
   </view>
 </view>
 <view class="" style="height:{{HeadBar}}rpx">
