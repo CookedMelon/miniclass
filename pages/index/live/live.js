@@ -3,14 +3,16 @@ Page({
     data: {
       orderInfo: [
         {
-          "tittle":"腾讯会议测试",
+          "tittle":"程序设计课程思政讲座",
           "meetingNumber":'852205426',
-          "host":"李旭"
+          "time":'2022-12-01 10:00--12:00',
+          "host":"周老师"
         },
         {
           "tittle":"程序设计答疑",
           "meetingNumber":'313822593',
-          "host":"李旭"
+          "time":'2022-12-02 18:00--20:00',
+          "host":"周老师"
         }
       ],
     },

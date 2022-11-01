@@ -8,18 +8,19 @@
     </view>
   </navigator>
   <view class="myTxtCenter" style="color:aliceblue;font-size: larger;height: {{navigationHeight}}rpx;width:100%;">
-    会议
+    直播
   </view>
 </view>
 <view class="" style="height:{{HeadBar}}rpx">
 
 </view>
-<view style="height:100rpx;width:100%;color:grey">
+<view style="height:150rpx;width:100%;color:grey">
   <view wx:for="{{orderInfo}}" wx:key>
     <view class="naviBlock">
       <view class="navigator">
         <view class="content">
           <view style="font-weight:bold;font-size:38rpx;margin-bottom:5px;">主题：{{item.tittle}}</view>
+          <view style="color: #8B8682;font-size:30rpx">开始时间：{{item.time}}</view>
           <view style="color: #8B8682;font-size:30rpx">会议号：{{item.meetingNumber}}</view>
           <view style="color: #8B8682;font-size:30rpx">主持人：{{item.host}}</view>
         </view>
