@@ -29,16 +29,22 @@
     </view>
     <view style="margin:auto;height:5rpx;background-color: blue;width:90%">
     </view>
-    <view class="padding-sm myTxtCenter" style="font-weight:600;font-size: medim;height:auto">
-        计算机基础教学与实验中心党支部党建宣传片
+    <view class="" style="background-color: rgb(255,248,220);border-radius:20rpx;width:90%;margin:auto">
+        <view class="padding-sm myTxtCenter" style="font-weight:600;font-size: 150%;height:auto">
+            计算机基础教学与实验中心
+        </view>    
+        <view class="padding-sm myTxtCenter" style="font-weight:600;font-size: 150%;height:auto">
+            党支部党建宣传片
+        </view>
     </view>
+
     <view style="margin:auto;height:5rpx;background-color: blue;width:90%">
     </view>
     <view class="" style="height:50rpx">
 
     </view>
     <view class="" style="width:90%;margin:auto">
-        <video class=""
+        <video class=""objectFit="cover"
             src="https://s-bj-4514-miniclassvideo.oss.dogecdn.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6%E4%B8%8E%E5%AE%9E%E9%AA%8C%E4%B8%AD%E5%BF%83%E5%85%9A%E6%94%AF%E9%83%A8%E5%85%9A%E5%BB%BA%E5%AE%A3%E4%BC%A0%E7%89%87.mp4"
             style="width:100%">
         </video>
@@ -49,18 +55,24 @@
     </view>
     <view style="margin:auto;height:5rpx;background-color: blue;width:90%">
     </view>
-    <view class="padding-sm myTxtCenter" style="font-weight:600;font-size: medium;height:auto">
-        微党课-计算机基础教学与实验中心支部
+    <view class="" style="background-color: rgb(255,248,220);border-radius:20rpx;width:90%;margin:auto">
+        <view class="padding-sm myTxtCenter" style="font-weight:600;font-size: 150%;height:auto">
+            微党课-计算机基础教学
+        </view>
+        <view class="padding-sm myTxtCenter" style="font-weight:600;font-size: 150%;height:auto">
+            与实验中心支部
+        </view>
     </view>
+
     <view style="margin:auto;height:5rpx;background-color: blue;width:90%">
     </view>
     <view class="" style="height:50rpx">
 
     </view>
     <view class="" style="width:90%;margin:auto">
-        <video class=""
+        <video class=""objectFit="cover"
             src="https://s-bj-4514-miniclassvideo.oss.dogecdn.com/%E5%BE%AE%E5%85%9A%E8%AF%BE-%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E6%95%99%E5%AD%A6%E4%B8%8E%E5%AE%9E%E9%AA%8C%E4%B8%AD%E5%BF%83%E6%94%AF%E9%83%A8.mp4"
-            style="width:100%">
+            style="width:100%;">
         </video>
     </view>
     <view class="" style="height:50rpx">

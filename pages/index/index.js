@@ -45,35 +45,116 @@ Page({
                 "acts": [
                     {
                         "name": "科学史话",
-                        "color": "bg-gradual-green"
-                    },
-                    {
-                        "name": "人物春秋",
-                        "color": "bg-gradual-purple"
-                    },
-                    {
-                        "name": "悦学经典",
-                        "color": "bg-gradual-blue"
+                        "color": "bg-gradual-blue",
+                        "bindtap": "jmp_NPU",
+                        "id": "19"
                     },
                     {
                         "name": "悦读书籍",
-                        "color": "bg-gradual-pink"
+                        "color": "bg-gradual-orange",
+                        "bindtap": "jmp_NPU",
+                        "id": "24"
+                    },
+                    
+                    {
+                        "name": "毓秀工大",
+                        "color": "bg-gradual-red",
+                        "bindtap": "jmp_NPU",
+                        "id": "17"
+                    },
+                    {
+                        "name": "人物春秋",
+                        "color": "bg-gradual-pink",
+                        "bindtap": "jmp_NPU",
+                        "id": "18"
+                    },
+                    
+                    
+                    {
+                        "name": "悦学经典",
+                        "color": "bg-gradual-green",
+                        "bindtap": "jmp_NPU",
+                        "id": "23"
                     }
+
                 ]
             },
             {
                 "name": "实践活动",
                 "acts": [
+                    {
+                        "name": "悦学经典",
+                        "color": "bg-gradual-green",
+                        "bindtap": "jmp_NPU",
+                        "id": "23"
+                    },
+                    {
+                        "name": "人物春秋",
+                        "color": "bg-gradual-pink",
+                        "bindtap": "jmp_NPU",
+                        "id": "18"
+                    },
+                    
+                    
+                    {
+                        "name": "悦读书籍",
+                        "color": "bg-gradual-orange",
+                        "bindtap": "jmp_NPU",
+                        "id": "24"
+                    },{
+                        "name": "科学史话",
+                        "color": "bg-gradual-blue",
+                        "bindtap": "jmp_NPU",
+                        "id": "19"
+                    },
+                    
+                    
+                    {
+                        "name": "毓秀工大",
+                        "color": "bg-gradual-red",
+                        "bindtap": "jmp_NPU",
+                        "id": "17"
+                    },
 
                 ]
             },
             {
                 "name": "学科竞赛",
                 "acts": [
+                    
                     {
-                        "name": "学习答题",
-                        "color": "bg-gradual-orange"
-                    }
+                        "name": "人物春秋",
+                        "color": "bg-gradual-pink",
+                        "bindtap": "jmp_NPU",
+                        "id": "18"
+                    },
+                   
+                    {
+                        "name": "悦读书籍",
+                        "color": "bg-gradual-orange",
+                        "bindtap": "jmp_NPU",
+                        "id": "24"
+                    },
+                    {
+                        "name": "悦学经典",
+                        "color": "bg-gradual-green",
+                        "bindtap": "jmp_NPU",
+                        "id": "23"
+                    },
+                    {
+                        "name": "毓秀工大",
+                        "color": "bg-gradual-red",
+                        "bindtap": "jmp_NPU",
+                        "id": "17"
+                    },
+                    
+                    {
+                        "name": "科学史话",
+                        "color": "bg-gradual-blue",
+                        "bindtap": "jmp_NPU",
+                        "id": "19"
+                    },
+
                 ]
             }
 

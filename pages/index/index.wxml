@@ -38,7 +38,7 @@
     <view class="padding-sm">
         <image mode="aspectFit" src=".././../image/index/2.png" bindtap="jmp_live" style="height:80%;width:80%"></image>
         <text class="" style="font-weight: 600;">
-            直播
+            会议
         </text>
     </view>
     <view class="padding-sm">
