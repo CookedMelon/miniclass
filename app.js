@@ -1,4 +1,5 @@
 // app.js
+import XMPlugin from './plugin'
 App({
     globalData: {
     },
@@ -43,6 +44,15 @@ App({
                 that.globalData.ktxWindowHeight = ktxWindowHeight;
                 that.globalData.ktxScreentHeight = ktxScreentHeight;
             }
+        })
+
+        
+        // atob() 
+        XMPlugin.init({
+          // 官方提供的 appKey 仅供测试，有调用次数限制，上线需替换为自己的 app_key。
+          appKey: '99b37417e1185eda1378600593b45c40',
+          appSecret: 'dd7a46b12fe8a304ef17892c89ede22a',
+          debug: true,
         })
     }
 })
