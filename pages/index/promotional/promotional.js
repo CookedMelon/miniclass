@@ -1,4 +1,5 @@
 const app = getApp();
+var util = require('../../../utils/util.js');
 Page({
 
     /**
@@ -37,5 +38,14 @@ Page({
             sectionindex: sectionindex
         })
     },
-
+    onShow(){
+      var time = util.formatTime(new Date());
+      var time_data = time.split(" ")[0];
+      console.log(time_data);
+      if(time_data=="2022/11/02"){
+          this.setData({
+            dontshow:true
+          })
+      }
+    }
 })

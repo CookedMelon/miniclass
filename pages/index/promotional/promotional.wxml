@@ -15,7 +15,7 @@
 <view class="" style="height:{{HeadBar}}rpx">
 
 </view>
-<view class="radius-xxx" style="width:90%;margin:5%;background-color:rgb(253, 253, 253)">
+<view class="radius-xxx" style="width:90%;margin:5%;background-color:rgb(253, 253, 253)" hidden="{{dontshow}}">
     <view class="" style="height:50rpx">
 
     </view>

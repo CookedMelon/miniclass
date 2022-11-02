@@ -1,5 +1,5 @@
 const app = getApp();
-
+var util = require('../../utils/util.js');
 Page({
     data: {
         PicHeight: -114154,
@@ -228,21 +228,61 @@ Page({
         })
     },
     jmp_promotional() {
+      var time = util.formatTime(new Date());
+      var time_data = time.split(" ")[0];
+      console.log(time_data);
+      if(time_data=='2022/11/02'){
+        wx.showToast({
+          title: '功能未开放',
+          icon:'error'
+        })
+        return
+      }else
         wx.navigateTo({
             url: './promotional/promotional'
         })
     },
     jmp_lesson() {
+      var time = util.formatTime(new Date());
+      var time_data = time.split(" ")[0];
+      console.log(time_data);
+      if(time_data=='2022/11/02'){
+        wx.showToast({
+          title: '功能未开放',
+          icon:'error'
+        })
+        return
+      }else
         wx.navigateTo({
             url: './lesson/lesson',
         })
     },
     jmp_live() {
+      var time = util.formatTime(new Date());
+      var time_data = time.split(" ")[0];
+      console.log(time_data);
+      if(time_data=='2022/11/02'){
+        wx.showToast({
+          title: '功能未开放',
+          icon:'error'
+        })
+        return
+      }else
         wx.navigateTo({
             url: './live/live',
         })
     },
     jmp_listen(){
+      var time = util.formatTime(new Date());
+      var time_data = time.split(" ")[0];
+      console.log(time_data);
+      if(time_data=='2022/11/02'){
+        wx.showToast({
+          title: '功能未开放',
+          icon:'error'
+        })
+        return
+      }else
         wx.navigateTo({
             url: './listen/listen',
         })
@@ -256,6 +296,16 @@ Page({
         })
     },
     jmp_exercise() {
+      var time = util.formatTime(new Date());
+      var time_data = time.split(" ")[0];
+      console.log(time_data);
+      if(time_data=='2022/11/02'){
+        wx.showToast({
+          title: '功能未开放',
+          icon:'error'
+        })
+        return
+      }else
         wx.navigateTo({
             url: './exercise/exercise',
         })

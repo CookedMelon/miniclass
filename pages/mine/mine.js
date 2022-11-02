@@ -106,6 +106,16 @@ Page({
 
     },
     jmp_lesson() {
+      var time = util.formatTime(new Date());
+      var time_data = time.split(" ")[0];
+      console.log(time_data);
+      if(time_data=='2022/11/01'){
+        wx.showToast({
+          title: '功能未开放',
+          icon:'error'
+        })
+        return
+      }else{
         if(this.data.iflogin){
             wx.navigateTo({
                         url: '../index/lesson/lesson',
@@ -117,7 +127,7 @@ Page({
                 duration: 2000
             })
         }
-        
+      }
     },
     jmp_exercise(){
         if(this.data.iflogin){
